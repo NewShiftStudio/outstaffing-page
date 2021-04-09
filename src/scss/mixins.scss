@@ -1,0 +1,21 @@
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin wh($width: 100px, $height: 100px) {
+  width: $width;
+  height: $height;
+}
+@mixin button($padding: 19px 23px, $text-color: $text-clr-light) {
+  padding: $padding;
+  background: $oth-clr-green;
+  color: $text-color;
+  transition: 0.3s;
+  @media (min-width: 1001px) {
+    &:hover {
+      background: $text-color;
+      color: $oth-clr-green;
+    }
+  }
+}
