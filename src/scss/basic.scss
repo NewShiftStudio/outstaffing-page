@@ -1,11 +1,36 @@
 body {
-  font-family: "Montserrat", sans-serif;
-  background: #333;
-  font-weight: 500;
+  font-family: $font-source;
+  background: $clr-white;
+  color: $clr-dark;
+  font-style: normal;
+  font-weight: normal;
   font-size: 20px;
-  color: white;
+}
+.section-title {
+  font-weight: 600;
+  font-size: $title-size-pc;
+  line-height: 45px;
+  @media (max-width: $size-laptop) {
+    font-size: $title-size-phone;
+  }
+}
+.global-container {
+  overflow: hidden;
 }
 .container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
+  @media (max-width: $size-phone) {
+    padding: 0 28px;
+  }
+}
+.basic-link {
+  color: $clr-dark;
+  text-decoration: none;
+  transition: 0.1s;
+  @media (min-width: 1024px) {
+    &:hover {
+      color: $clr-orange;
+    }
+  }
 }

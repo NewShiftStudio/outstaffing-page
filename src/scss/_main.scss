@@ -1,0 +1,162 @@
+.main {
+  padding: 154px 0 205px 0;
+  background: url(../images/main/main-bg-desktop.png) right no-repeat;
+  background-position: top -80px right 0;
+  @media (max-width: $size-macbook) {
+    background-position: top -80px right -130px;
+  }
+  @media (max-width: $size-laptop) {
+    background-position: top -80px right -190px;
+  }
+  @media (max-width: $size-ipad-pro) {
+    background: url(../images/main/main-bg-small.png) right no-repeat;
+    background-position: bottom 100px left -10px;
+    // padding: 184px 0 0 0;
+    padding: 104px 0 0 0;
+  }
+  @media (max-width: $size-ipad) {
+    background-position: bottom 100px left -100px;
+  }
+  @media (max-width: $size-phone) {
+    background-position: bottom 60px left -451px;
+    // padding: 182px 0 0 0;
+    padding: 102px 0 0 0;
+  }
+  @media (max-width: $size-phone) {
+    background-position: bottom 60px left -520px;
+  }
+  &-blocks {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $size-ipad-pro) {
+      align-items: center;
+    }
+  }
+  &__block {
+    &:first-of-type {
+      padding: 0 70px;
+      margin-bottom: 284px;
+      @media (max-width: $size-ipad-pro) {
+        padding: 0;
+        margin-bottom: 172px;
+      }
+      @media (max-width: $size-phone) {
+        margin-bottom: 152px;
+      }
+      .main-outstaffing {
+        &-blocks {
+          @include flex(row, space-between, center, wrap);
+          @media (max-width: $size-ipad-pro) {
+            flex-direction: column;
+          }
+        }
+        &__block {
+          &:first-of-type {
+            max-width: 440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media (max-width: $size-ipad-pro) {
+              max-width: 440px;
+            }
+            @media (max-width: $size-phone) {
+              max-width: 100%;
+            }
+            .main-outstaffing {
+              &__title {
+                color: $clr-black;
+                margin-bottom: 20px;
+                line-height: 45px;
+                font-weight: 600;
+                @media (max-width: $size-phone) {
+                  margin-bottom: 50px;
+                  max-width: 300px;
+                }
+              }
+              &__info {
+                margin-bottom: 50px;
+                color: $clr-dark;
+                font-size: 24px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 30px;
+                @media (max-width: $size-phone) {
+                  font-size: 18px;
+                  margin-bottom: 50px;
+                }
+              }
+            }
+          }
+          &:last-of-type {
+            @include wh(317px, 378px);
+            img {
+              width: 100%;
+              height: 100%;
+            }
+            @media (max-width: $size-ipad-pro) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &:last-of-type {
+      @media (max-width: $size-ipad-pro) {
+        padding: 0 0;
+      }
+      .main-calculator {
+        &-blocks {
+          @include flex(row, space-between, center, wrap);
+          @media (max-width: $size-ipad-pro) {
+            justify-content: center;
+            flex-direction: column;
+          }
+        }
+        &__block {
+          &:first-of-type {
+            max-width: 455px;
+            @include flex(column, flex-start, flex-start, nowrap);
+            @media (max-width: $size-phone) {
+              margin-bottom: 30px;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+          &:last-of-type {
+            @include wh(312px, 338px);
+            img {
+              width: 100%;
+              height: 100%;
+            }
+            @media (max-width: $size-phone) {
+              @include wh(100%, auto);
+            }
+          }
+        }
+        &__title {
+          font-size: $title-size-pc;
+          font-weight: bold;
+          line-height: 45px;
+          color: $clr-white;
+          margin-bottom: 30px;
+          @media (max-width: $size-phone) {
+            font-size: $title-size-phone;
+            margin-bottom: 30px;
+          }
+        }
+        &__info {
+          span {
+            display: block;
+            line-height: 23px;
+            font-size: 18px;
+            font-weight: 600;
+            color: $clr-white;
+          }
+          span:first-of-type {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}
