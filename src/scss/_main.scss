@@ -11,16 +11,14 @@
   @media (max-width: $size-ipad-pro) {
     background: url(../images/main/main-bg-small.png) right no-repeat;
     background-position: bottom 100px left -10px;
-    // padding: 184px 0 0 0;
-    padding: 104px 0 0 0;
+    padding: 184px 0 0 0;
   }
   @media (max-width: $size-ipad) {
     background-position: bottom 100px left -100px;
   }
   @media (max-width: $size-phone) {
     background-position: bottom 60px left -451px;
-    // padding: 182px 0 0 0;
-    padding: 102px 0 0 0;
+    padding: 182px 0 0 0;
   }
   @media (max-width: $size-phone) {
     background-position: bottom 60px left -520px;
@@ -124,10 +122,6 @@
           }
           &:last-of-type {
             @include wh(312px, 338px);
-            img {
-              width: 100%;
-              height: 100%;
-            }
             @media (max-width: $size-phone) {
               @include wh(100%, auto);
             }

@@ -1,0 +1,64 @@
+.main-calculator__block {
+  .calculator {
+    padding: 41px 48px 19px 48px;
+    background: $clr-white;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 47px;
+    .citizenship,
+    .loan {
+      margin-bottom: 12px;
+      color: $clr-dark;
+      font-size: 18px;
+      line-height: 23px;
+    }
+    .citizenship-btns,
+    .loan-btns {
+      @include flex(row, space-between, center, nowrap);
+      margin-bottom: 20px;
+    }
+    span {
+      display: block;
+      text-align: center;
+      margin-bottom: 23px;
+      font-size: 18px;
+      color: $clr-dark;
+      opacity: 0.8;
+      line-height: 23px;
+    }
+    .price-container {
+      @include flex(row, center, flex-end, nowrap);
+      .calculator-price {
+        color: $clr-dark;
+        font-size: 36px;
+        margin-right: 12px;
+      }
+      .currency {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 18px;
+        color: $clr-dark;
+        opacity: 0.8;
+      }
+    }
+    .btn-calculator {
+      @include flex(row, space-between, center, nowrap);
+      position: relative;
+      color: $clr-dark;
+      font-size: 18px;
+      line-height: 23px;
+      padding: 0 0 3px 0;
+      font-weight: bold;
+      &.selected {
+        &:after {
+          position: absolute;
+          content: "";
+          bottom: -3px;
+          left: 0;
+          width: 100%;
+          background: $clr-orange;
+          height: 3px;
+        }
+      }
+    }
+  }
+}

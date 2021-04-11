@@ -82,4 +82,34 @@
       }
     }
   }
+  @media (max-width: $size-ipad-pro) {
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+    background: $clr-white;
+    &-navbar {
+      z-index: 1000;
+    }
+    &-navbar-items {
+      padding: 70px 0 32px 0;
+      align-items: center;
+      justify-content: space-between;
+      transition: 0.3s;
+      background: $clr-white;
+      left: -4000px;
+      top: 0;
+      position: fixed;
+      user-zoom: fixed;
+      z-index: 600;
+      flex-direction: column;
+      width: 100vw;
+      height: 224px;
+      .header-navbar__item {
+        margin: 0;
+      }
+      &.active {
+        left: 0;
+      }
+    }
+  }
 }

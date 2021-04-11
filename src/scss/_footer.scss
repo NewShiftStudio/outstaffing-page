@@ -58,8 +58,8 @@
     .contacts {
       &__title {
         font-weight: 600;
+        text-align: start;
         margin-bottom: 30px;
-        width: fit-content;
       }
       &__contact {
         opacity: 0.8;

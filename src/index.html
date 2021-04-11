@@ -100,24 +100,31 @@
                   />
                 </div>
               </div>
+              3
               <div class="header__item">
                 <nav class="header-navbar">
-                  <button class="btn btn-burger"><span></span></button>
                   <div class="header-navbar-items">
-                    <a href="#" class="basic-link header-navbar__item">
+                    <a
+                      href="main-calculator-blocks"
+                      class="basic-link header-navbar__item"
+                    >
                       калькулятор
                     </a>
-                    <a href="#" class="basic-link header-navbar__item">
+                    <a href="we-helps" class="basic-link header-navbar__item">
                       об аутстаффинге
                     </a>
-                    <a href="#" class="basic-link header-navbar__item">
+                    <a
+                      href="why-outstaffing"
+                      class="basic-link header-navbar__item"
+                    >
                       преимущества
                     </a>
-                    <a href="#" class="basic-link header-navbar__item">
+                    <a href="contacts" class="basic-link header-navbar__item">
                       контакты
                     </a>
                   </div>
                 </nav>
+                <button class="btn btn-burger"><span></span></button>
               </div>
             </div>
           </div>
@@ -165,11 +172,55 @@
                     </p>
                   </div>
                   <div class="main-calculator__block">
-                    <img
-                      src="../src/images/main/calculator.png"
-                      alt=""
-                      class="main-calculator__img"
-                    />
+                    <div class="calculator">
+                      <div class="citizenship">Гражданство</div>
+                      <div class="citizenship-btns">
+                        <button
+                          data-calculator="SNG"
+                          class="btn btn-calculator btn-citizenship selected"
+                        >
+                          СНГ
+                        </button>
+                        <button
+                          data-calculator="RF"
+                          class="btn btn-calculator btn-citizenship"
+                        >
+                          РФ
+                        </button>
+                        <button
+                          data-calculator="RF"
+                          class="btn btn-calculator btn-citizenship"
+                        >
+                          ЕАЭС
+                        </button>
+                      </div>
+                      <div class="loan">Ставка</div>
+                      <div class="loan-btns">
+                        <button
+                          data-calculator="1"
+                          class="btn btn-calculator btn-loan selected"
+                        >
+                          МРОТ
+                        </button>
+                        <button
+                          data-calculator="0.5"
+                          class="btn-calculator btn btn-loan"
+                        >
+                          ½ МРОТ
+                        </button>
+                        <button
+                          data-calculator="0.25"
+                          class="btn-calculator btn btn-loan"
+                        >
+                          ¼ МРОТ
+                        </button>
+                      </div>
+                      <span>Стоимость оформления одного работника</span>
+                      <div class="price-container">
+                        <span class="calculator-price"></span>
+                        <span class="currency">руб.</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -261,6 +312,14 @@
                 name="tel"
                 pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
               />
+              <div class="response-state">
+                <img
+                  class="response-img"
+                  src="../src/images/icons/response-bad.svg"
+                  alt=""
+                />
+                <div class="response-text">Заявка не была отправлена</div>
+              </div>
               <button type="submit" class="btn btn-request">
                 отправить заявку
               </button>
@@ -339,7 +398,7 @@
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63954.07394172386!2d30.357991813769527!3d59.9393631919889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310b32cbe2e9%3A0x74e032aa0505dfc!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3Ri9C5INCt0YDQvNC40YLQsNC2!5e0!3m2!1sru!2sru!4v1618142110020!5m2!1sru!2sru"
                   width="100%"
-                  height="532px"
+                  height="548px"
                   style="border: 0"
                   allowfullscreen=""
                   loading="lazy"
@@ -373,6 +432,14 @@
                     name="tel"
                     pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
                   />
+                  <div class="response-state">
+                    <img
+                      class="response-img"
+                      src="../src/images/icons/response-bad.svg"
+                      alt=""
+                    />
+                    <div class="response-text">Заявка не была отправлена</div>
+                  </div>
                   <button type="submit" class="btn btn-submit">
                     <img src="../src/images/icons/submit-form.svg" alt="" />
                   </button>

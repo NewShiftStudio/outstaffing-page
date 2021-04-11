@@ -1,0 +1,31 @@
+.request-form {
+  .response {
+    &-state {
+      margin: 0 auto 18px auto;
+    }
+    &-text {
+      font-size: 12px;
+      line-height: 15px;
+      color: $clr-dark-lighten;
+    }
+    &-img {
+      @include wh(15px, 15px);
+      margin-right: 10px;
+    }
+    &-state {
+      @include flex(row, space-between, center, nowrap);
+    }
+  }
+}
+.we-helps {
+  .request-form {
+    .response {
+    }
+  }
+}
+.contacts {
+  .request-form {
+    .response {
+    }
+  }
+}

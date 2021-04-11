@@ -30,8 +30,6 @@
       max-width: 500px;
       margin: 0 auto;
     }
-    @media (max-width: $size-phone) {
-    }
     &__map {
       @include flex(row, center, center, nowrap);
       width: 100%;

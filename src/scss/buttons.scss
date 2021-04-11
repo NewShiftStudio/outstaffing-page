@@ -4,45 +4,63 @@
   color: #373737;
   border: none;
   font-size: 20px;
+  font-family: $font-source;
   &:hover {
     border: none;
   }
   &-burger {
     display: none;
+    padding: 0;
     @media (max-width: $size-ipad-pro) {
+      position: relative;
+      z-index: 1005;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    @include wh(34px, 23px);
-    box-sizing: border-box;
-    span,
-    span:after,
-    span:before {
-      border-radius: 7px;
-      display: block;
-      background: $clr-orange;
-      content: "";
-      width: 34px;
-      min-width: 34px;
-      height: 5px;
-      min-height: 5px;
-    }
-    span {
-      position: relative;
-      &:after,
-      &:before {
-        position: absolute;
-        left: calc(50% - 17px);
-        top: calc(50% - 2.5px);
+      @include wh(34px, 23px);
+      box-sizing: border-box;
+      span,
+      span:after,
+      span:before {
+        border-radius: 7px;
+        display: block;
+        background: $clr-orange;
+        content: "";
+        width: 34px;
+        min-width: 34px;
+        height: 5px;
+        min-height: 5px;
       }
-      &:after {
-        transition: 0.5s;
-        margin-top: 9px;
+      span {
+        position: relative;
+        &:after,
+        &:before {
+          position: absolute;
+          left: calc(50% - 17px);
+          top: calc(50% - 2.5px);
+        }
+        &:after {
+          transition: 0.5s;
+          margin-top: 9px;
+        }
+        &:before {
+          transition: 0.5s;
+          margin-top: -9px;
+        }
       }
-      &:before {
-        transition: 0.5s;
-        margin-top: -9px;
+    }
+    @media (max-width: $size-ipad-pro) {
+      &.active {
+        span {
+          transform: rotate(-135deg);
+        }
+        span::after {
+          margin: 0;
+          transform: rotate(270deg);
+        }
+        span::before {
+          display: none;
+        }
       }
     }
   }
