@@ -1,0 +1,165 @@
+.contacts {
+  padding: 80px 0;
+  @media (max-width: $size-ipad-pro) {
+    padding: 110px 0;
+  }
+  @media (max-width: $size-phone) {
+    padding: 50px 0;
+  }
+  &-outer {
+    padding: 0 43px;
+    @media (max-width: $size-ipad-pro) {
+      padding: 0 0;
+    }
+    @media (max-width: $size-phone) {
+      padding: 0;
+    }
+  }
+  &__title {
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  &-card {
+    width: 100%;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 47px;
+    @include flex(row, space-between, center, nowrap);
+    overflow: hidden;
+    @media (max-width: $size-ipad-pro) {
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    @media (max-width: $size-phone) {
+    }
+    &__map {
+      @include flex(row, center, center, nowrap);
+      width: 100%;
+      height: 100%;
+      @media (max-width: $size-ipad-pro) {
+        iframe {
+          height: 391px;
+        }
+      }
+      @media (max-width: $size-phone) {
+        padding: 0;
+      }
+    }
+    &-text {
+      span {
+        display: block;
+      }
+      margin-bottom: 50px;
+      @media (max-width: $size-phone) {
+        @include flex(row, space-between, center, wrap);
+      }
+    }
+    &-info {
+      max-width: 340px;
+      padding: 50px 70px 15px 70px;
+      @media (max-width: $size-ipad-pro) {
+        @include flex(row, space-between, flex-start, nowrap);
+        padding: 30px 42px;
+        max-width: 100%;
+        width: 100%;
+      }
+      @media (max-width: $size-phone) {
+        flex-direction: column;
+        padding: 30px 30px;
+      }
+    }
+    .card {
+      &__title {
+        margin-bottom: 30px;
+        color: $clr-dark;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+        @media (max-width: $size-phone) {
+          margin-bottom: 20px;
+          width: 100%;
+          text-align: center;
+        }
+        @media (max-width: $size-iphone-se) {
+          font-size: 16px;
+        }
+      }
+      &__contact {
+        line-height: 23px;
+        text-transform: uppercase;
+        opacity: 0.8;
+        font-size: 18px;
+        color: $clr-dark;
+        margin-bottom: 12px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        @media (max-width: $size-ipad-pro) {
+          margin-bottom: 6px;
+        }
+        @media (max-width: $size-ipad) {
+          font-size: 17px;
+          &:last-of-type {
+            white-space: nowrap;
+          }
+        }
+        @media (max-width: $size-iphone-se) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .request-form {
+    box-sizing: border-box;
+    max-width: 200px;
+    @include flex(column, center, flex-end, nowrap);
+    margin: 0 auto;
+    @media (max-width: $size-ipad-pro) {
+      margin: 0;
+    }
+    @media (max-width: $size-phone) {
+      margin: 0 auto;
+    }
+
+    &__title {
+      align-self: flex-start;
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 30px;
+      color: $clr-dark;
+      @media (max-width: $size-ipad-pro) {
+        margin-bottom: 14px;
+      }
+    }
+    &-name {
+      margin-bottom: 20px;
+      @media (max-width: $size-ipad-pro) {
+        margin-bottom: 6px;
+      }
+    }
+    &-phone {
+      margin-bottom: 26px;
+      @media (max-width: $size-ipad-pro) {
+        margin-bottom: 14px;
+      }
+      @media (max-width: $size-phone) {
+      }
+    }
+    &-name,
+    &-phone {
+      font-family: $font-source;
+      font-size: 18px;
+      padding-bottom: 3px;
+      border: none;
+      border-bottom: 1px solid $clr-orange;
+      width: 100%;
+      &:placeholder {
+        font-size: 18px;
+        font: $font-source;
+        color: $clr-dark-lighten;
+        opacity: 0.5;
+      }
+    }
+  }
+}

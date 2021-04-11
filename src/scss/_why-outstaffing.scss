@@ -1,0 +1,83 @@
+.why-outstaffing {
+  &-container {
+    padding-top: 90px;
+    @media (min-width: $size-laptop) {
+      padding: 90px 100px 0 100px;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    color: $clr-dark-lighten;
+    line-height: 45px;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    text-align: center;
+    @media (max-width: $size-ipad-pro) {
+      margin-bottom: 35px;
+    }
+  }
+  &-cards {
+    @include flex(row, space-between, center, wrap);
+    @media (max-width: $size-ipad-pro) {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  &__card {
+    @include flex(row, space-between, center, wrap);
+    margin-bottom: 61px;
+
+    &:last-of-type {
+      margin: 0 auto;
+    }
+    @media (max-width: $size-ipad-pro) {
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+    @media (max-width: $size-phone) {
+      margin-bottom: 10px;
+      flex-direction: column;
+    }
+    .card {
+      &-number {
+        color: $clr-pink;
+        margin-right: 28px;
+        font-size: 64px;
+        font-weight: bold;
+        @media (max-width: $size-phone) {
+          margin: 0px 0 10px 0;
+        }
+      }
+      &-content {
+        min-height: 165px;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 38px;
+        max-width: 402px;
+        padding: 19px 40px 30px 30px;
+        @media (max-width: $size-ipad-pro) {
+          min-height: auto;
+        }
+        @media (max-width: $size-phone) {
+          padding: 13px 27px 16px 23px;
+        }
+      }
+      &-title,
+      &-text {
+        color: $clr-dark;
+        display: block;
+      }
+      &-title {
+        font-weight: bold;
+        font-size: 24px;
+        @media (max-width: $size-phone) {
+          margin-bottom: 2px;
+        }
+      }
+      &-text {
+        line-height: 23px;
+        font-size: 18px;
+      }
+    }
+  }
+}
