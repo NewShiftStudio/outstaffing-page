@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
 
-const filename = (ext) => (isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`)
+const filename = ext => (isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`)
 const jsLoaders = () => {
   const loaders = [
     {
@@ -73,6 +73,18 @@ module.exports = {
       {
         from: path.resolve(__dirname, 'src/favicon.ico'),
         to: path.resolve(__dirname, 'dist'),
+      },
+    ]),
+    new CopyPlugin([
+      {
+        from: path.resolve(__dirname, 'src/sendmail.php'),
+        to: path.resolve(__dirname, 'dist'),
+      },
+    ]),
+    new CopyPlugin([
+      {
+        from: path.resolve(__dirname, 'src/phpmailer'),
+        to: path.resolve(__dirname, 'dist/phpmailer'),
       },
     ]),
     new MiniCssExtractPlugin({

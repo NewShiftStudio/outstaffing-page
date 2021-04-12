@@ -1,4 +1,5 @@
 import './scss/index.scss'
 import './js/calculator'
 import './js/burger'
+import './js/validation'
 import './js/form'
