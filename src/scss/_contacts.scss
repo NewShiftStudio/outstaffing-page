@@ -44,6 +44,10 @@
       }
     }
     &-text {
+      a {
+        text-decoration: none;
+        display: block;
+      }
       span {
         display: block;
       }
@@ -127,7 +131,7 @@
       line-height: 30px;
       color: $clr-dark;
       @media (max-width: $size-ipad-pro) {
-        margin-bottom: 14px;
+        margin: 0 auto 14px auto;
       }
     }
     &-name {

@@ -18,6 +18,10 @@
     &:first-of-type {
       padding-left: 40px;
       .we-helps__text {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
         margin-bottom: 12px;
         display: block;
         @media (max-width: $size-ipad-pro) {
@@ -35,8 +39,12 @@
     &:last-of-type {
       padding-right: 40px;
       .we-helps__text {
+        text-transform: uppercase;
+        line-height: 23px;
+        font-size: 18px;
         margin-top: 12px;
         display: block;
+        font-weight: 400;
       }
       @media (max-width: $size-ipad-pro) {
         padding-right: 0;
@@ -52,10 +60,12 @@
     }
   }
   &-info {
+    font-size: 18px;
     max-width: 532px;
   }
   .we-helps-list {
     .list__title {
+      text-transform: uppercase;
       display: block;
       margin-bottom: 12px;
       color: $clr-black;
@@ -90,7 +100,7 @@
     }
   }
   &-who {
-    color: $clr-dark-lighten;
+    color: $clr-dark;
     margin-bottom: 24px;
     font-size: 24px;
     font-weight: bold;

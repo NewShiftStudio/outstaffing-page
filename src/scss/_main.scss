@@ -69,6 +69,7 @@
                 @media (max-width: $size-phone) {
                   margin-bottom: 50px;
                   max-width: 300px;
+                  text-align: center;
                 }
               }
               &__info {
@@ -114,6 +115,9 @@
           &:first-of-type {
             max-width: 455px;
             @include flex(column, flex-start, flex-start, nowrap);
+            @media (max-width: $size-ipad-pro) {
+              margin-bottom: 80px;
+            }
             @media (max-width: $size-phone) {
               margin-bottom: 30px;
               justify-content: center;
@@ -121,9 +125,23 @@
             }
           }
           &:last-of-type {
+            position: relative;
             @include wh(312px, 338px);
             @media (max-width: $size-phone) {
               @include wh(100%, auto);
+            }
+            .calculator-scroll-helper {
+              top: -100px;
+              left: 0;
+              position: absolute;
+              content: "";
+              opacity: 0;
+              @media (max-width: $size-ipad-pro) {
+                top: -500px;
+              }
+              @media (max-width: $size-phone) {
+                top: -450px;
+              }
             }
           }
         }
