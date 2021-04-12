@@ -15,7 +15,6 @@ forms.forEach(form => {
     const name = nameInput.value
     formData.append('phone', phone)
     formData.append('name', name)
-    console.log(formData)
     btn.setAttribute('disabled', true)
     success.style.visibility = 'visible'
 
