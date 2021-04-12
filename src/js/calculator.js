@@ -19,7 +19,6 @@ function ifSelected(el, cb) {
     cb()
   }
 }
-
 function initButtons() {
   loanBtns.forEach(btn => {
     btn.addEventListener('click', e => {
@@ -36,7 +35,6 @@ function initButtons() {
     })
   })
 }
-
 function unselectType(elements) {
   elements.forEach(element => {
     ifSelected(element, () => {
@@ -63,3 +61,4 @@ function priceCalculator() {
   price.innerHTML = calculated
 }
 priceCalculator()
+initButtons()
