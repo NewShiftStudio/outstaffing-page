@@ -6,10 +6,12 @@ body {
   font-weight: normal;
   font-size: 20px;
 }
+
 .section-title {
   font-weight: 600;
   font-size: $title-size-pc;
   line-height: 45px;
+  color: $clr-dark-lighten;
   @media (max-width: $size-laptop) {
     font-size: $title-size-phone;
   }
@@ -28,7 +30,7 @@ body {
   color: $clr-dark;
   text-decoration: none;
   transition: 0.1s;
-  @media (min-width: 1024px) {
+  @media (min-width: $size-laptop) {
     &:hover {
       color: $clr-orange;
     }
