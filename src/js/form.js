@@ -1,6 +1,6 @@
 const forms = document.querySelectorAll('.request-form')
 
-forms.forEach(form => {
+forms.forEach((form) => {
   const formData = new FormData(form)
 
   const btn = form.querySelector('.btn-request')
@@ -9,7 +9,7 @@ forms.forEach(form => {
   const nameInput = form.querySelector('.request-form-name')
   const phoneInput = form.querySelector('.request-form-phone')
 
-  form.addEventListener('submit', async e => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault()
     const phone = phoneInput.value
     const name = nameInput.value
