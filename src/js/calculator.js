@@ -19,24 +19,26 @@ function ifSelected(el, cb) {
     cb()
   }
 }
+
 function initButtons() {
-  loanBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+  loanBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
       unselectType(loanBtns)
       btn.classList.toggle('selected')
       priceCalculator()
     })
   })
-  citizenshipBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+  citizenshipBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
       unselectType(citizenshipBtns)
       btn.classList.toggle('selected')
       priceCalculator()
     })
   })
 }
+
 function unselectType(elements) {
-  elements.forEach((element) => {
+  elements.forEach(element => {
     ifSelected(element, () => {
       element.classList.toggle('selected')
     })
@@ -47,12 +49,12 @@ function priceCalculator() {
   let calculated = ''
   let currentCitizenship = ''
   let currentLoan = ''
-  citizenshipBtns.forEach((btn) => {
+  citizenshipBtns.forEach(btn => {
     ifSelected(btn, () => {
       currentCitizenship = btn.dataset.calculator
     })
   })
-  loanBtns.forEach((btn) => {
+  loanBtns.forEach(btn => {
     ifSelected(btn, () => {
       currentLoan = btn.dataset.calculator
     })
@@ -61,4 +63,3 @@ function priceCalculator() {
   price.innerHTML = calculated
 }
 priceCalculator()
-initButtons()

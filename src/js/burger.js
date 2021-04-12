@@ -4,8 +4,8 @@ const navigation = document.querySelectorAll('.header-navbar__item')
 
 document.body.style.overflowY = 'visible'
 
-navigation.forEach((selector) => {
-  selector.addEventListener('click', (e) => {
+navigation.forEach(selector => {
+  selector.addEventListener('click', e => {
     e.preventDefault()
     let equal = document.querySelector(`.${selector.getAttribute('href')}`)
     equal.scrollIntoView({ block: 'start', behavior: 'smooth' })
@@ -16,7 +16,7 @@ navigation.forEach((selector) => {
   })
 })
 
-burgerBtn.addEventListener('click', (e) => {
+burgerBtn.addEventListener('click', e => {
   e.preventDefault()
   burgerBtn.classList.toggle('active')
   burgerMenu.classList.toggle('active')
