@@ -7,6 +7,8 @@
     padding-top: 90px;
   }
   &-img {
+    max-width: 500px;
+    max-height: 420px;
     @media (max-width: $size-ipad-pro) {
       display: none;
     }
