@@ -17,7 +17,7 @@ $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true; 
 $mail->Username = 'support2@newshift.ru'; 
-$mail->Password = ''; 
+$mail->Password = 'i45xLc2ujCNwE7yQ'; 
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465; 
 $mail->setFrom('support2@newshift.ru');

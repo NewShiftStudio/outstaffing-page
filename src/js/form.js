@@ -1,6 +1,6 @@
 const forms = document.querySelectorAll('.request-form')
 
-forms.forEach((form) => {
+forms.forEach(form => {
   const formData = new FormData(form)
 
   const btn = form.querySelector('.btn-request')
@@ -9,12 +9,13 @@ forms.forEach((form) => {
   const nameInput = form.querySelector('.request-form-name')
   const phoneInput = form.querySelector('.request-form-phone')
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', async e => {
     e.preventDefault()
     const phone = phoneInput.value
     const name = nameInput.value
     formData.append('phone', phone)
     formData.append('name', name)
+
     btn.setAttribute('disabled', true)
     success.style.visibility = 'visible'
 
@@ -29,7 +30,7 @@ forms.forEach((form) => {
       success.innerText = 'Отправлено!'
       success.style.visibility = 'visible'
       successImg.style.visibility = 'visible'
-      successImg.setAttribute('src', '../src/images/icons/response-ok.svg')
+      successImg.setAttribute('src', '../images/icons/response-ok.svg')
       success.style.color = 'green'
       btn.removeAttribute('disabled')
       setTimeout(() => {
@@ -41,7 +42,7 @@ forms.forEach((form) => {
       success.innerText = 'Заявка не была отправлена'
       success.style.visibility = 'visible'
       successImg.style.visibility = 'visible'
-      successImg.setAttribute('src', '../src/images/icons/response-bad.svg')
+      successImg.setAttribute('src', '../images/icons/response-bad.svg')
       success.style.color = 'tomato'
     }
   })

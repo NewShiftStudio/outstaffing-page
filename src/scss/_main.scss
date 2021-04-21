@@ -2,6 +2,11 @@
   padding: 154px 0 205px 0;
   background: url(../images/main/main-bg-desktop.png) right no-repeat;
   background-position: top -80px right 0;
+  @media (min-width: $size-desktop) {
+    overflow: visible;
+    background-position: top 0 right 0;
+    background-size: 100% 100%;
+  }
   @media (max-width: $size-macbook) {
     background-position: top -80px right -130px;
   }
@@ -66,10 +71,12 @@
                 margin-bottom: 20px;
                 line-height: 45px;
                 font-weight: 600;
+                font-size: 36px;
                 @media (max-width: $size-phone) {
                   margin-bottom: 50px;
                   max-width: 300px;
                   text-align: center;
+                  font-size: 24px;
                 }
               }
               &__info {
