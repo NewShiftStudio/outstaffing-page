@@ -27,6 +27,7 @@
     }
     .price-container {
       @include flex(row, center, flex-end, nowrap);
+      min-height: 46px;
       .calculator-price {
         color: $clr-dark;
         font-size: 36px;

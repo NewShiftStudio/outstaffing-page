@@ -81,14 +81,47 @@
     }
   }
   &-copyright {
-    text-align: center;
+    display: block;
     font-size: 20px;
     line-height: 23px;
     font-weight: 500;
     opacity: 0.8;
-    margin-top: 22px;
     @media (max-width: $size-phone) {
-      margin-top: 14px;
+      margin-top: 5px;
+      order: 2;
+    }
+  }
+  &-bottom {
+    margin-top: 22px;
+    @include flex(row, space-between, center, wrap);
+    @media (max-width: $size-phone) {
+      margin-top: 10px;
+      flex-direction: column;
+    }
+  }
+  &-dev {
+    display: flex !important;
+    @include flex(row, space-between, center, wrap);
+    .dev {
+      &-text {
+        font-size: 18px;
+        margin-right: 20px;
+      }
+      &-logo {
+        @include wh(133.2px, 24px);
+      }
+      @media (max-width: $size-phone) {
+        &-text {
+          font-size: 18px;
+          margin-right: 10px;
+        }
+        &-logo {
+          @include wh(111px, 20px);
+        }
+      }
+    }
+    @media (max-width: $size-phone) {
+      order: 1;
     }
   }
 }

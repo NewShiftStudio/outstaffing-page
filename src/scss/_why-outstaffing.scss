@@ -59,7 +59,7 @@
           min-height: auto;
         }
         @media (max-width: $size-phone) {
-          padding: 13px 27px 16px 23px;
+          padding: 13.6px 27px 16.4px 23px;
         }
       }
       &-title,
@@ -73,11 +73,16 @@
         margin-bottom: 17px;
         @media (max-width: $size-phone) {
           margin-bottom: 2px;
+          line-height: 30px;
         }
       }
       &-text {
         line-height: 23px;
         font-size: 18px;
+        @media (max-width: $size-phone) {
+          font-size: 14px;
+          line-height: 18px;
+        }
       }
     }
   }

@@ -1,7 +1,11 @@
 .main {
   padding: 154px 0 205px 0;
   background: url(../images/main/main-bg-desktop.png) right no-repeat;
-  background-position: top -80px right 0;
+  background-position: top 0 right 0;
+  @media (min-width: $size-desktop) {
+    background-size: 100% 100%;
+    overflow: visible;
+  }
   @media (max-width: $size-macbook) {
     background-position: top -80px right -130px;
   }
@@ -66,10 +70,12 @@
                 margin-bottom: 20px;
                 line-height: 45px;
                 font-weight: 600;
+                font-size: 36px;
                 @media (max-width: $size-phone) {
                   margin-bottom: 50px;
                   max-width: 300px;
                   text-align: center;
+                  font-size: 24px;
                 }
               }
               &__info {
@@ -100,6 +106,7 @@
       }
     }
     &:last-of-type {
+      padding: 0 156px;
       @media (max-width: $size-ipad-pro) {
         padding: 0 0;
       }
@@ -126,7 +133,7 @@
           }
           &:last-of-type {
             position: relative;
-            @include wh(312px, 338px);
+            @include wh(312px, auto);
             @media (max-width: $size-phone) {
               @include wh(100%, auto);
             }
@@ -168,6 +175,25 @@
             margin-bottom: 30px;
           }
         }
+      }
+    }
+  }
+  .salary {
+    margin-bottom: 5px;
+    width: 100%;
+    border: 0;
+    border-bottom: 3px $clr-orange solid;
+    font-size: 18px;
+    font-family: $font-source;
+    &-status {
+      content: "";
+      opacity: 0;
+      width: 100%;
+      color: red;
+      font-size: 14px;
+      margin-bottom: 15px;
+      &.active {
+        opacity: 1;
       }
     }
   }
