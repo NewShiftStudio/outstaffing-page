@@ -51,7 +51,7 @@ function initButtons() {
       btn.classList.toggle('selected')
       if (
         salaryStatus.classList.contains('active') ||
-        Number.isNaN(currentNum)
+        Number.isNaN(getInputNum())
       ) {
         return
       }
