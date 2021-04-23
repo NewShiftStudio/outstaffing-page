@@ -49,7 +49,10 @@ function initButtons() {
     addListener(btn, 'click', () => {
       unselectType(citizenshipBtns)
       btn.classList.toggle('selected')
-      if (salaryStatus.classList.contains('active')) {
+      if (
+        salaryStatus.classList.contains('active') ||
+        Number.isNaN(currentNum)
+      ) {
         return
       }
       calculate()
