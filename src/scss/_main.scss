@@ -184,6 +184,11 @@
     border: 0;
     border-bottom: 3px $clr-orange solid;
     font-size: 18px;
+    font-size: 24px;
+    &:placeholder {
+      font-size: 24px;
+      font-family: $font-source;
+    }
     font-family: $font-source;
     &-status {
       content: "";

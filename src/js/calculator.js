@@ -1,14 +1,10 @@
 const price = document.querySelector('.calculator-price')
 const salaryInput = document.querySelector('.salary')
-defaultSalary = 10000
-salaryInput.value = defaultSalary.toLocaleString()
 const citizenshipBtns = document.querySelectorAll('.btn-citizenship')
 const salaryStatus = document.querySelector('.salary-status')
-const salaryMask = `[0-9]{10000,99999}`
 const errors = {
   lower: 'Ошибка: Оклад меньше 1000р',
   higher: 'Ошибка: Оклад больше 99999р',
-  empty: 'Ошибка: Введите оклад',
 }
 function calcSNG(salary) {
   return parseInt(
@@ -81,8 +77,8 @@ function validateCurrentSalary(e) {
     return false
   }
   if (Number.isNaN(currentNum)) {
-    salaryStatus.innerHTML = errors.empty
-    price.innerHTML = ''
+    price.innerHTML = '—'
+    salaryStatus.classList.remove('active')
     return false
   }
   if (currentNum > 999999 || currentNum < 1000) {
@@ -90,11 +86,13 @@ function validateCurrentSalary(e) {
     price.innerHTML = ''
     if (currentNum < 1000) {
       salaryStatus.innerHTML = errors.lower
+      price.innerHTML = '—'
       setInputWithSpaces()
       return false
     }
     if (currentNum > 999999) {
       salaryStatus.innerHTML = errors.higher
+      price.innerHTML = '—'
       setInputWithSpaces()
       return false
     }
@@ -137,4 +135,3 @@ function calculate() {
 
 initButtons()
 initSalaryInput()
-calculate()
