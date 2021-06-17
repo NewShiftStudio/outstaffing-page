@@ -3,7 +3,7 @@ const salaryInput = document.querySelector('.salary')
 const citizenshipBtns = document.querySelectorAll('.btn-citizenship')
 const salaryStatus = document.querySelector('.salary-status')
 const errors = {
-  lower: 'Ошибка: Оклад меньше 1000р',
+  lower: 'Ошибка: Оклад слишком мал',
   higher: 'Ошибка: Оклад больше 99999р',
 }
 function calcSNG(salary) {
@@ -84,10 +84,10 @@ function validateCurrentSalary(e) {
     salaryStatus.classList.remove('active')
     return false
   }
-  if (currentNum > 999999 || currentNum < 1000) {
+  if (currentNum > 999999 || currentNum < 1) {
     salaryStatus.classList.add('active')
     price.innerHTML = ''
-    if (currentNum < 1000) {
+    if (currentNum < 1) {
       salaryStatus.innerHTML = errors.lower
       price.innerHTML = '—'
       setInputWithSpaces()
