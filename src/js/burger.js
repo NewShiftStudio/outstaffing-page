@@ -8,7 +8,6 @@ navigation.forEach((selector) => {
   selector.addEventListener('click', (e) => {
     e.preventDefault()
     let equal = document.querySelector(`.${selector.getAttribute('href')}`)
-    console.log(equal.classList.contains('request-form'))
     if (equal.classList.contains('request-form')) {
       equal.scrollIntoView({ block: 'center', behavior: 'smooth' })
     } else {
