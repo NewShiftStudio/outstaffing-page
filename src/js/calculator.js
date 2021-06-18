@@ -13,7 +13,8 @@ function calcSNG(salary) {
       2000 +
       salary * 0.22 +
       salary * 0.018 +
-      salary * 0.017
+      salary * 0.017,
+    10
   )
 }
 function calcRF(salary) {
@@ -24,7 +25,8 @@ function calcRF(salary) {
       salary * 0.22 +
       salary * 0.018 +
       (salary / 100) * 5.1 +
-      salary * 0.017
+      salary * 0.017,
+    10
   )
 }
 function addListener(elements, listener, cb) {
@@ -70,7 +72,7 @@ function initSalaryInput() {
 }
 function validateCurrentSalary(e) {
   const numberV = salaryInput.value.replace(/\D/g, '')
-  const currentNum = parseInt(numberV)
+  const currentNum = parseInt(numberV, 10)
   if (e.data && /\D/g.test(e.data)) {
     salaryInput.value = numberV
     if (Number.isNaN(currentNum)) {
